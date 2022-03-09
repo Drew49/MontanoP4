@@ -33,7 +33,8 @@
             this.lblHowToUse = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabInventory = new System.Windows.Forms.TabPage();
-            this.cbxTypeOFDep = new System.Windows.Forms.ComboBox();
+            this.rbDoubleDecline = new System.Windows.Forms.RadioButton();
+            this.rbStraightLine = new System.Windows.Forms.RadioButton();
             this.lbxInventory = new System.Windows.Forms.ListBox();
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnAddToInventory = new System.Windows.Forms.Button();
@@ -86,7 +87,7 @@
             // 
             this.lblHowToUse.AutoSize = true;
             this.lblHowToUse.Font = new System.Drawing.Font("Segoe UI", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblHowToUse.Location = new System.Drawing.Point(223, 135);
+            this.lblHowToUse.Location = new System.Drawing.Point(266, 130);
             this.lblHowToUse.Name = "lblHowToUse";
             this.lblHowToUse.Size = new System.Drawing.Size(293, 30);
             this.lblHowToUse.TabIndex = 1;
@@ -95,7 +96,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(177, 249);
+            this.textBox1.Location = new System.Drawing.Point(227, 248);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -107,7 +108,8 @@
             // tabInventory
             // 
             this.tabInventory.BackColor = System.Drawing.Color.Peru;
-            this.tabInventory.Controls.Add(this.cbxTypeOFDep);
+            this.tabInventory.Controls.Add(this.rbDoubleDecline);
+            this.tabInventory.Controls.Add(this.rbStraightLine);
             this.tabInventory.Controls.Add(this.lbxInventory);
             this.tabInventory.Controls.Add(this.btnRemove);
             this.tabInventory.Controls.Add(this.btnAddToInventory);
@@ -130,17 +132,27 @@
             this.tabInventory.TabIndex = 1;
             this.tabInventory.Text = "Inventory";
             // 
-            // cbxTypeOFDep
+            // rbDoubleDecline
             // 
-            this.cbxTypeOFDep.FormattingEnabled = true;
-            this.cbxTypeOFDep.Items.AddRange(new object[] {
-            "Straight Line",
-            "Double Decline"});
-            this.cbxTypeOFDep.Location = new System.Drawing.Point(575, 315);
-            this.cbxTypeOFDep.Name = "cbxTypeOFDep";
-            this.cbxTypeOFDep.Size = new System.Drawing.Size(163, 23);
-            this.cbxTypeOFDep.TabIndex = 17;
-            this.cbxTypeOFDep.Text = "Straight Line";
+            this.rbDoubleDecline.AutoSize = true;
+            this.rbDoubleDecline.Location = new System.Drawing.Point(595, 354);
+            this.rbDoubleDecline.Name = "rbDoubleDecline";
+            this.rbDoubleDecline.Size = new System.Drawing.Size(110, 19);
+            this.rbDoubleDecline.TabIndex = 18;
+            this.rbDoubleDecline.TabStop = true;
+            this.rbDoubleDecline.Text = "Double Decline";
+            this.rbDoubleDecline.UseVisualStyleBackColor = true;
+            // 
+            // rbStraightLine
+            // 
+            this.rbStraightLine.AutoSize = true;
+            this.rbStraightLine.Location = new System.Drawing.Point(595, 307);
+            this.rbStraightLine.Name = "rbStraightLine";
+            this.rbStraightLine.Size = new System.Drawing.Size(96, 19);
+            this.rbStraightLine.TabIndex = 17;
+            this.rbStraightLine.TabStop = true;
+            this.rbStraightLine.Text = "Straight Line";
+            this.rbStraightLine.UseVisualStyleBackColor = true;
             // 
             // lbxInventory
             // 
@@ -355,6 +367,7 @@
         private System.Windows.Forms.Button btnCalculateInventoryVal;
         private System.Windows.Forms.TextBox txbTotalInventory;
         private System.Windows.Forms.ListBox lbxInventory;
-        private System.Windows.Forms.ComboBox cbxTypeOFDep;
+        private System.Windows.Forms.RadioButton rbDoubleDecline;
+        private System.Windows.Forms.RadioButton rbStraightLine;
     }
 }

@@ -43,7 +43,7 @@ namespace MontanoP4
 
         private void btnAddToInventory_Click(object sender, EventArgs e)
         {
-            if (cbxTypeOFDep.Text == "Straight Line")
+            if (rbStraightLine.Checked)
             {
                 DepreciationStraightLine item = new DepreciationStraightLine();
                 item.Title = txbTitle.Text;
@@ -55,9 +55,9 @@ namespace MontanoP4
                 inventory.Add(item);
                 lbxInventory.DataSource = null;
                 lbxInventory.DataSource = inventory;
-                System.Windows.Forms.MessageBox.Show("Item added successfully");
+                
             }
-            else if (cbxTypeOFDep.Text == "Double Decline")
+            if (rbDoubleDecline.Checked)
             {
                 DoubleDepreciation itemDD = new DoubleDepreciation(txbTitle.Text, decimal.Parse(txbStartVal.Text),
                     decimal.Parse(txbEndVal.Text));
@@ -68,7 +68,7 @@ namespace MontanoP4
                 inventory.Add(itemDD);
                 lbxInventory.DataSource= null;
                 lbxInventory.DataSource = inventory;
-                System.Windows.Forms.MessageBox.Show("Item added successfully");
+                
             }
                 
                 
