@@ -6,17 +6,25 @@ using System.Threading.Tasks;
 
 namespace MontanoP4
 {
-    class DoubleDepreciation:DepreciationStraightLine
+    public class DoubleDepreciation:InventoryItem
     {
-        public override void Calc()
+        public DoubleDepreciation(string title, decimal startVal, decimal endVal)
         {
-            decimal doubleDeclineRate = 2 * (1 / LifeTime) * (StartValue);
+            Title = title;
+            StartVal = startVal;
+            EndVal = endVal;
+        }
+
+        public void Calc()
+        {
+            decimal doubleDeclineRate = 2 * (1 / Lifetime) * (StartVal);
         }
 
         public override string ToString()
         {
-            return Title + ": Starting value of:  " + StartValue 
-                + ". Ending vaalue of:  " + EndValue + ". This will depreciate at double declining rate.";
+            return Title + ": Starting value of:  " + StartVal
+                + ". Ending value of:  " + EndVal + ". Added on: " + DateInInventory  +". Lifetime is : "
+                +Lifetime + " years." + ". This will depreciate at double declining rate.";
         }
     }
 }

@@ -6,37 +6,21 @@ using System.Threading.Tasks;
 
 namespace MontanoP4
 {
-    public abstract class DepreciationStraightLine
+    class DepreciationStraightLine:InventoryItem
     {
-        public string Title { get; set; }
-        public decimal StartValue
-        {
-            get { return StartValue; }
-            set { StartValue = value; Calc(); }
-          
-        }
-        public decimal EndValue
-        {
-            get { return EndValue; }
-            set { EndValue = value; Calc(); }
-        }
-        public int LifeTime
-        {
-            get { return LifeTime; }
-            set { LifeTime = value; Calc(); }
-        }
 
-        public DateTime DateInInventory { get; set; }
-        public DateTime DateOutOfInventory { get; set; }
+      
 
         public override string ToString()
         {
-            return Title + ": Starting value of:  " + StartValue + ". Ending vaalue of:  " + EndValue;
+            return Title + ": Starting value of:  " + StartVal + ". Ending vaalue of:  " + EndVal
+                + ". Added on: " + DateInInventory + ". Lifetime is : " + Lifetime + " years.";
+
         }
 
-        public virtual void Calc()
+        public void Calc()
         {
-            decimal annualDepreciation = (StartValue - EndValue) * (1 / LifeTime);
+            decimal annualDepreciation = (StartVal- EndVal) * (1 / Lifetime);
         }
        
               
