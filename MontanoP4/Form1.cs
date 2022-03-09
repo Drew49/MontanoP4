@@ -58,8 +58,10 @@ namespace MontanoP4
             }
             if (rbDoubleDecline.Checked)
             {
-                DoubleDepreciation itemDD = new DoubleDepreciation(txbTitle.Text, decimal.Parse(txbStartVal.Text),
-                    decimal.Parse(txbEndVal.Text));
+                DoubleDepreciation itemDD = new DoubleDepreciation();
+                itemDD.Title = txbTitle.Text;
+                itemDD.StartVal = decimal.Parse(txbStartVal.Text);
+                itemDD.EndVal = decimal.Parse(txbEndVal.Text);
                 itemDD.Lifetime = int.Parse(txbLifetime.Text);
                 
                 itemDD.DateInInventory = dtpInInventory.Value.ToString("yyyy-MM-dd");

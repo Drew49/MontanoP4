@@ -9,53 +9,64 @@ namespace MontanoP4
     class DepreciationStraightLine:InventoryItem
     {
         private decimal startVal;
-        public decimal StartVal
+        public override decimal StartVal
         {
             get { return startVal; }
             set
             {
                 startVal = value;
-                Calc();
+                //Calc();
             }
         }
         private decimal endVal;
-        public decimal EndVal
+        public override decimal EndVal
         {
             get { return endVal; }
             set
             {
                 endVal = value;
-                Calc();
+                //Calc();
             }
         }
         private int lifetime;
 
-        public int Lifetime
+        public override int Lifetime
         {
             get { return lifetime; }
             set
             {
                 lifetime = value;
+                //Calc();
+            }
+        }
+        /*private decimal annualDep;
+        public override decimal AnnualDep
+        {
+            get { return annualDep; }
+            set
+            {
+                annualDep = value;
                 Calc();
             }
         }
+
 
 
 
 
         public override void Calc()
         {
-            decimal annualDep, totalDep;
-            annualDep = 0;
-            totalDep = 0;
+            
+            
             decimal salvageVal = StartVal - EndVal;
-            annualDep = salvageVal / Lifetime;
-            for (int years =0;years <= Lifetime;years++)
+            AnnualDep = salvageVal / Lifetime;
+            int years;
+            /*for (years = 0 ;years <= lifetime; years++)
             {
                 salvageVal = salvageVal - annualDep;
                 totalDep = totalDep + annualDep;
             }
-        }
+        }*/
 
             
 
