@@ -15,6 +15,7 @@ namespace MontanoP4
         public string DateInInventory { get; set; }
         public string DateOutOfInventory { get; set; }
         //public abstract string ToString();
+        public abstract void Calc();
 
         
 

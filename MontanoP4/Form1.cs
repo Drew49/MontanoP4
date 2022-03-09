@@ -33,14 +33,10 @@ namespace MontanoP4
                     lbxInventory.DataSource = items;
                     System.Windows.Forms.MessageBox.Show("Item deleted");
                 }
-
-            }
-            else
-            {
-                System.Windows.Forms.MessageBox.Show("No items found");
             }
         }
 
+       
         private void btnAddToInventory_Click(object sender, EventArgs e)
         {
             if (rbStraightLine.Checked)
@@ -56,6 +52,9 @@ namespace MontanoP4
                 lbxInventory.DataSource = null;
                 lbxInventory.DataSource = inventory;
                 
+              
+
+
             }
             if (rbDoubleDecline.Checked)
             {

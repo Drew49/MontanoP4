@@ -15,9 +15,20 @@ namespace MontanoP4
             EndVal = endVal;
         }
 
-        public void Calc()
+        public override void Calc()
         {
-            decimal doubleDeclineRate = 2 * (1 / Lifetime) * (StartVal);
+            decimal annualDep, totalDep;
+            annualDep = 0;
+            totalDep = 0;
+            decimal salvageVal = StartVal - EndVal;
+            annualDep = salvageVal / Lifetime;
+            for (int years = 0; years <= Lifetime; years++)
+            {
+                salvageVal = salvageVal - (2* annualDep);
+                totalDep = totalDep + annualDep;
+            }
+            
+
         }
 
         public override string ToString()
