@@ -41,7 +41,7 @@ namespace MontanoP4
                 //Calc();
             }
         }
-        /*private decimal annualDep;
+        private decimal annualDep;//TODO: Should this property actually be the total? RJG
         public override decimal AnnualDep
         {
             get { return annualDep; }
@@ -52,22 +52,20 @@ namespace MontanoP4
             }
         }
 
-
-
-        public override void Calc()
+        protected override void Calc()
         {
-            
+
             decimal salvageVal = StartVal - EndVal;
-            AnnualDep = salvageVal / Lifetime;
-            /*int years;
+            AnnualDep = salvageVal / Lifetime;//TODO: Consider making this a vaiable local to the Calc method. RJG
+            int years;
             for (years =  0; years <= lifetime; years++)
             {
                 salvageVal = salvageVal - (2* annualDep);
-                totalDep = totalDep + annualDep;
+                totalDep = totalDep + annualDep; //TODO: totalDep isn't defined. TotalDep should probably be a property and annualDep a variable declared in this method. RJG
             }
             
 
-        }*/
+        }
 
         public override string ToString()
         {

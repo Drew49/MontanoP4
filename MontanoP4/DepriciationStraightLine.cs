@@ -39,7 +39,7 @@ namespace MontanoP4
                 //Calc();
             }
         }
-        /*private decimal annualDep;
+        private decimal annualDep;
         public override decimal AnnualDep
         {
             get { return annualDep; }
@@ -50,23 +50,19 @@ namespace MontanoP4
             }
         }
 
-
-
-
-
-        public override void Calc()
+        protected override void Calc()
         {
-            
-            
+
+
             decimal salvageVal = StartVal - EndVal;
             AnnualDep = salvageVal / Lifetime;
             int years;
-            /*for (years = 0 ;years <= lifetime; years++)
+            for (years = 0 ;years <= lifetime; years++)
             {
                 salvageVal = salvageVal - annualDep;
                 totalDep = totalDep + annualDep;
             }
-        }*/
+        }
 
             
 
